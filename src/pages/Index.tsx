@@ -33,7 +33,7 @@ export default function Index() {
           playsInline
           className="absolute inset-0 w-full h-full object-cover scale-110"
         >
-          <source src="https://player.vimeo.com/external/548370291.hd.mp4?s=7de96c44e740179619e2e7fc11fed75875fc0edf" type="video/mp4" />
+          <source src="vid.mp4" type="video/mp4" />
         </video>
         
         <div className="container relative z-20 px-4 text-center" ref={parallaxRef}>
@@ -47,7 +47,7 @@ export default function Index() {
             Transform your ride with our premium modifications and accessories.
           </p>
           <Link
-            to="/shop"
+            to="/"
             className="inline-block px-8 py-4 bg-white text-black font-medium rounded hover:bg-white/90 transition-all hover:scale-105 transform"
           >
             Explore Collection
@@ -67,17 +67,17 @@ export default function Index() {
             {
               title: "Carbon Fiber Key Case",
               price: "$129",
-              image: "https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=800&q=80"
+              image: "3.png"
             },
             {
               title: "Custom F1 Plate",
               price: "$299",
-              image: "https://images.unsplash.com/photo-1514316454349-750a7fd3da3a?w=800&q=80"
+              image: "2.png"
             },
             {
               title: "Premium Spoiler Shelf",
               price: "$199",
-              image: "https://images.unsplash.com/photo-1536700503339-1e4b06520771?w=800&q=80"
+              image: "1.jpg"
             }
           ].map((product, i) => (
             <div
@@ -92,36 +92,11 @@ export default function Index() {
               />
               <div className="absolute bottom-0 left-0 right-0 p-6 z-20 transform translate-y-4 group-hover:translate-y-0 transition-transform">
                 <h3 className="text-xl font-semibold mb-2">{product.title}</h3>
-                <p className="text-white/80">{product.price}</p>
               </div>
             </div>
           ))}
         </div>
       </section>
-
-      {/* Newsletter */}
-      <section className="container mx-auto px-4 py-20">
-        <div className="glass rounded-2xl p-12 text-center transform hover:scale-[1.02] transition-all duration-500">
-          <h2 className="text-3xl font-bold mb-4 tracking-tighter">Join the Vroom Squad</h2>
-          <p className="text-white/60 mb-8 max-w-xl mx-auto">
-            Subscribe to our newsletter and be the first to know about new mods and exclusive offers.
-          </p>
-          <form className="max-w-md mx-auto flex">
-            <input
-              type="email"
-              placeholder="Enter your email"
-              className="flex-1 px-4 py-3 bg-white/5 border border-white/10 rounded-l focus:outline-none focus:ring-1 focus:ring-white/20"
-            />
-            <button
-              type="submit"
-              className="px-6 py-3 bg-white text-black font-medium rounded-r hover:bg-white/90 transition-all hover:scale-105 transform"
-            >
-              Subscribe
-            </button>
-          </form>
-        </div>
-      </section>
-
       <Footer />
     </div>
   );

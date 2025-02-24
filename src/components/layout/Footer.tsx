@@ -7,7 +7,7 @@ export default function Footer() {
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="space-y-4">
-            <h3 className="text-xl font-bold tracking-tighter">AUTOLUX</h3>
+            <h3 className="text-xl font-bold tracking-tighter">VROOM MODS</h3>
             <p className="text-sm text-muted-foreground">
               Premium automotive accessories for the discerning enthusiast.
             </p>
@@ -56,7 +56,7 @@ export default function Footer() {
         
         <div className="mt-12 pt-8 border-t border-white/10">
           <p className="text-sm text-center text-muted-foreground">
-            © {new Date().getFullYear()} AUTOLUX. All rights reserved.
+            © {new Date().getFullYear()} VROOM MODS. All rights reserved.
           </p>
         </div>
       </div>
