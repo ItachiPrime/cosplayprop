@@ -10,21 +10,21 @@ export default function Navbar() {
     <nav className="fixed top-0 left-0 right-0 z-50 glass">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
-          <Link to="/" className="text-xl font-bold tracking-tighter">
-            AUTOLUX
+          <Link to="/" className="text-xl font-bold tracking-tighter hover:scale-105 transform transition-transform">
+            VROOM MODS
           </Link>
           
           <div className="hidden md:flex items-center space-x-8">
-            <Link to="/" className="text-sm hover:text-white/80 transition-colors">
+            <Link to="/" className="text-sm hover:text-white/80 transition-all hover:scale-105 transform">
               Home
             </Link>
-            <Link to="/shop" className="text-sm hover:text-white/80 transition-colors">
+            <Link to="/shop" className="text-sm hover:text-white/80 transition-all hover:scale-105 transform">
               Shop
             </Link>
-            <Link to="/about" className="text-sm hover:text-white/80 transition-colors">
+            <Link to="/about" className="text-sm hover:text-white/80 transition-all hover:scale-105 transform">
               About
             </Link>
-            <button className="p-2 hover:bg-white/10 rounded-full transition-colors">
+            <button className="p-2 hover:bg-white/10 rounded-full transition-all hover:scale-105 transform">
               <ShoppingCart size={20} />
             </button>
           </div>
@@ -44,21 +44,21 @@ export default function Navbar() {
           <div className="px-2 pt-2 pb-3 space-y-1">
             <Link 
               to="/" 
-              className="block px-3 py-2 rounded-md text-base hover:bg-white/10 transition-colors"
+              className="block px-3 py-2 rounded-md text-base hover:bg-white/10 transition-all hover:scale-105 transform"
               onClick={() => setIsOpen(false)}
             >
               Home
             </Link>
             <Link 
               to="/shop" 
-              className="block px-3 py-2 rounded-md text-base hover:bg-white/10 transition-colors"
+              className="block px-3 py-2 rounded-md text-base hover:bg-white/10 transition-all hover:scale-105 transform"
               onClick={() => setIsOpen(false)}
             >
               Shop
             </Link>
             <Link 
               to="/about" 
-              className="block px-3 py-2 rounded-md text-base hover:bg-white/10 transition-colors"
+              className="block px-3 py-2 rounded-md text-base hover:bg-white/10 transition-all hover:scale-105 transform"
               onClick={() => setIsOpen(false)}
             >
               About

@@ -1,41 +1,58 @@
 
 import { Link } from 'react-router-dom';
+import { useEffect, useRef } from 'react';
 import Navbar from '../components/layout/Navbar';
 import Footer from '../components/layout/Footer';
+import Hero3D from '../components/3d/Hero3D';
 
 export default function Index() {
+  const parallaxRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (!parallaxRef.current) return;
+      const scrolled = window.scrollY;
+      const rate = scrolled * 0.5;
+      parallaxRef.current.style.transform = `translate3d(0, ${rate}px, 0)`;
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
     <div className="min-h-screen">
       <Navbar />
       
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
+        <Hero3D />
         <div className="absolute inset-0 bg-gradient-to-b from-black/50 to-background z-10" />
         <video
           autoPlay
           loop
           muted
           playsInline
-          className="absolute inset-0 w-full h-full object-cover"
+          className="absolute inset-0 w-full h-full object-cover scale-110"
         >
           <source src="https://player.vimeo.com/external/548370291.hd.mp4?s=7de96c44e740179619e2e7fc11fed75875fc0edf" type="video/mp4" />
         </video>
         
-        <div className="container relative z-20 px-4 text-center">
-          <span className="inline-block mb-4 px-3 py-1 bg-white/10 backdrop-blur-sm rounded-full text-sm">
-            Premium Automotive Accessories
+        <div className="container relative z-20 px-4 text-center" ref={parallaxRef}>
+          <span className="inline-block mb-4 px-3 py-1 bg-white/10 backdrop-blur-sm rounded-full text-sm animate-fade-in">
+            Premium Automotive Modifications
           </span>
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 tracking-tighter">
-            Elevate Your Drive
+          <h1 className="text-4xl md:text-7xl font-bold mb-6 tracking-tighter animate-slide-up">
+            VROOM MODS
           </h1>
-          <p className="text-lg md:text-xl text-white/80 mb-8 max-w-2xl mx-auto">
-            Discover our collection of premium key cases, custom F1 plates, and spoiler shelves.
+          <p className="text-lg md:text-xl text-white/80 mb-8 max-w-2xl mx-auto animate-fade-in">
+            Transform your ride with our premium modifications and accessories.
           </p>
           <Link
             to="/shop"
-            className="inline-block px-8 py-4 bg-white text-black font-medium rounded hover:bg-white/90 transition-colors"
+            className="inline-block px-8 py-4 bg-white text-black font-medium rounded hover:bg-white/90 transition-all hover:scale-105 transform"
           >
-            Shop Now
+            Explore Collection
           </Link>
         </div>
       </section>
@@ -43,8 +60,8 @@ export default function Index() {
       {/* Featured Products */}
       <section className="container mx-auto px-4 py-20">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold mb-4 tracking-tighter">Featured Products</h2>
-          <p className="text-white/60">Handpicked selection of our finest accessories</p>
+          <h2 className="text-3xl font-bold mb-4 tracking-tighter">Featured Mods</h2>
+          <p className="text-white/60">Elevate your driving experience</p>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -67,15 +84,16 @@ export default function Index() {
           ].map((product, i) => (
             <div
               key={i}
-              className="group relative overflow-hidden rounded-lg aspect-square"
+              className="group relative overflow-hidden rounded-lg aspect-square hover:scale-105 transform transition-all duration-500"
             >
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent z-10" />
               <img
                 src={product.image}
                 alt={product.title}
-                className="absolute inset-0 w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
+                className="absolute inset-0 w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
               />
-              <div className="absolute bottom-0 left-0 right-0 p-6 z-20">
+              <div className="absolute bottom-0 left-0 right-0 p-6 z-20 transform translate-y
+-4 group-hover:translate-y-0 transition-transform">
                 <h3 className="text-xl font-semibold mb-2">{product.title}</h3>
                 <p className="text-white/80">{product.price}</p>
               </div>
@@ -86,10 +104,10 @@ export default function Index() {
 
       {/* Newsletter */}
       <section className="container mx-auto px-4 py-20">
-        <div className="glass rounded-2xl p-12 text-center">
-          <h2 className="text-3xl font-bold mb-4 tracking-tighter">Stay Updated</h2>
+        <div className="glass rounded-2xl p-12 text-center transform hover:scale-[1.02] transition-all duration-500">
+          <h2 className="text-3xl font-bold mb-4 tracking-tighter">Join the Vroom Squad</h2>
           <p className="text-white/60 mb-8 max-w-xl mx-auto">
-            Subscribe to our newsletter and be the first to know about new products and exclusive offers.
+            Subscribe to our newsletter and be the first to know about new mods and exclusive offers.
           </p>
           <form className="max-w-md mx-auto flex">
             <input
@@ -99,7 +117,7 @@ export default function Index() {
             />
             <button
               type="submit"
-              className="px-6 py-3 bg-white text-black font-medium rounded-r hover:bg-white/90 transition-colors"
+              className="px-6 py-3 bg-white text-black font-medium rounded-r hover:bg-white/90 transition-all hover:scale-105 transform"
             >
               Subscribe
             </button>
