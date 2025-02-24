@@ -4,7 +4,7 @@ import { Mail } from 'lucide-react';
 export default function Footer() {
   return (
     <footer className="glass mt-20">
-      <div className="container mx-auto px-4 py-12">
+      <div className="container mx-auto px-4 pt-12 pb-6">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="space-y-4">
             <h3 className="text-xl font-bold tracking-tighter">VROOM MODS</h3>
@@ -59,6 +59,9 @@ export default function Footer() {
             © {new Date().getFullYear()} VROOM MODS. All rights reserved.
           </p>
         </div>
+        <div className="text-sm text-center text-gray-600 pt-4 pb-0">
+        Developed by <a href="https://github.com/ItachiPrime" className="text-red-600 font-semibold hover:text-red-500" target="blank">ItachiPrime</a>
+      </div>
       </div>
     </footer>
   );
