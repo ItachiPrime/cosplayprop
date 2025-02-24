@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import { useEffect, useRef } from 'react';
 import Navbar from '../components/layout/Navbar';
 import Footer from '../components/layout/Footer';
-import Hero3D from '../components/3d/Hero3D';
 
 export default function Index() {
   const parallaxRef = useRef<HTMLDivElement>(null);
@@ -26,7 +25,6 @@ export default function Index() {
       
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
-        <Hero3D />
         <div className="absolute inset-0 bg-gradient-to-b from-black/50 to-background z-10" />
         <video
           autoPlay
@@ -92,8 +90,7 @@ export default function Index() {
                 alt={product.title}
                 className="absolute inset-0 w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
               />
-              <div className="absolute bottom-0 left-0 right-0 p-6 z-20 transform translate-y
--4 group-hover:translate-y-0 transition-transform">
+              <div className="absolute bottom-0 left-0 right-0 p-6 z-20 transform translate-y-4 group-hover:translate-y-0 transition-transform">
                 <h3 className="text-xl font-semibold mb-2">{product.title}</h3>
                 <p className="text-white/80">{product.price}</p>
               </div>
