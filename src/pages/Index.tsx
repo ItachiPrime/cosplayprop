@@ -25,7 +25,7 @@ export default function Index() {
       
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-black/50 to-background z-10" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/40 to-background z-10" />
         <video
           autoPlay
           loop
