@@ -4,21 +4,21 @@ import { Mail } from 'lucide-react';
 export default function Footer() {
   return (
     <footer className="glass mt-20">
-      <div className="container mx-auto px-4 pt-12 pb-6">
+      <div className="container mx-auto px-8 pt-12 pb-6">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="space-y-4">
-            <h3 className="text-xl font-bold tracking-tighter">VROOM MODS</h3>
+            <h3 className="text-xl font-bold tracking-tighter">COSPLAY PROPS</h3>
             <p className="text-sm text-muted-foreground">
-              Premium automotive accessories for the discerning enthusiast.
+            Handcrafted Cosplay Props & 3D Collectibles
             </p>
           </div>
           
           <div>
             <h4 className="font-semibold mb-4">Shop</h4>
             <ul className="space-y-2">
-              <li><a href="#" className="text-sm text-muted-foreground hover:text-white transition-colors">Key Cases</a></li>
-              <li><a href="#" className="text-sm text-muted-foreground hover:text-white transition-colors">Custom F1 Plates</a></li>
-              <li><a href="#" className="text-sm text-muted-foreground hover:text-white transition-colors">Spoiler Shelves</a></li>
+              <li><a href="#" className="text-sm text-muted-foreground hover:text-white transition-colors">Masks</a></li>
+              <li><a href="#" className="text-sm text-muted-foreground hover:text-white transition-colors">Collectibles</a></li>
+              <li><a href="#" className="text-sm text-muted-foreground hover:text-white transition-colors">3D Figures</a></li>
             </ul>
           </div>
           
@@ -56,7 +56,7 @@ export default function Footer() {
         
         <div className="mt-12 pt-8 border-t border-white/10">
           <p className="text-sm text-center text-muted-foreground">
-            © {new Date().getFullYear()} VROOM MODS. All rights reserved.
+            © {new Date().getFullYear()} COSPLAY PROPS. All rights reserved.
           </p>
         </div>
         <div className="text-sm text-center text-gray-600 pt-4 pb-0">

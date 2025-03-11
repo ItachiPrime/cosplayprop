@@ -33,18 +33,18 @@ export default function Index() {
           playsInline
           className="absolute inset-0 w-full h-full object-cover scale-110"
         >
-          <source src="vid.mp4" type="video/mp4" />
+          <source src="vid1.mp4" type="video/mp4" />
         </video>
         
         <div className="container relative z-20 px-4 text-center" ref={parallaxRef}>
           <span className="inline-block mb-4 px-3 py-1 bg-white/10 backdrop-blur-sm rounded-full text-sm animate-fade-in">
-            Premium Automotive Modifications
+          Handcrafted Cosplay Props & 3D Collectibles
           </span>
           <h1 className="text-4xl md:text-7xl font-bold mb-6 tracking-tighter animate-slide-up">
-            VROOM MODS
+            COSPLAY PROPS
           </h1>
           <p className="text-lg md:text-xl text-white/80 mb-8 max-w-2xl mx-auto animate-fade-in">
-            Transform your ride with our premium modifications and accessories.
+          Bring characters to life with premium 3D-printed props.
           </p>
           <Link
             to="/"
@@ -56,28 +56,28 @@ export default function Index() {
       </section>
 
       {/* Featured Products */}
-      <section className="container mx-auto px-4 pt-20">
+      <section className="container mx-auto px-8 pt-20">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold mb-4 tracking-tighter">Featured Mods</h2>
-          <p className="text-white/60">Elevate your driving experience</p>
+          <h2 className="text-3xl font-bold mb-4 tracking-tighter">Featured Props</h2>
+          <p className="text-white/60">BECOME YOUR FAVORITE HERO</p>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {[
             {
-              title: "Carbon Fiber Key Case",
+              title: "Samurai mask",
               price: "$129",
-              image: "3.png"
+              image: "A (1).jpg"
             },
             {
-              title: "Custom F1 Plate",
+              title: "Black Panther Mask",
               price: "$299",
-              image: "2.png"
+              image: "A2.png"
             },
             {
-              title: "Premium Spoiler Shelf",
+              title: "Wolverine Cosplay",
               price: "$199",
-              image: "1.jpg"
+              image: "A (3).jpg"
             }
           ].map((product, i) => (
             <div
